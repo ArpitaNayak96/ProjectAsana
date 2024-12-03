@@ -1,0 +1,35 @@
+// @ts-check
+const { devices } = require('@playwright/test');
+
+module.exports = {
+  timeout: 15000,  // Set the timeout for all tests
+};
+
+const config = {
+  testDir: './tests',
+  retries :0,
+  
+  /* Maximum time one test can run for. */
+  timeout: 30 * 1000,
+  expect: {
+  
+    timeout: 15000
+  },
+  
+  reporter: 'html',
+  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  use: {
+
+    browserName : 'chromium',
+    headless : true,
+    screenshot : 'on',
+    trace : 'on',//off,on
+    
+    
+    
+  },
+
+
+};
+
+module.exports = config;
